@@ -3,9 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Snackbar</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
   </head>
   <body>
+    <p><a href="./index.html">Go back</a></p>
+
+    <form class="form">
+      <div class="delay-container">
+        <label class="form-label">
+          Delay (ms)
+          <input class="form-input" type="number" name="delay" required />
+        </label>
+      </div>
+
+      <fieldset class="fieldset">
+        <legend class="legend">State</legend>
+        <div class="legend-container">
+          <label class="legend-label">
+            <input
+              class="legend-input"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label class="legend-label">
+            <input
+              class="legend-input"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </div>
+      </fieldset>
+
+      <button class="btn" type="submit">Create notification</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
     <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>
